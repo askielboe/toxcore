@@ -47,7 +47,11 @@
 #include <unistd.h>
 #include <time.h>
 #include <stdbool.h>
+#if defined(__APPLE__)
+#include <limits.h>
+#else
 #include <linux/limits.h>
+#endif
 #include <sys/stat.h>
 #include <unistd.h>
 #include <errno.h>
